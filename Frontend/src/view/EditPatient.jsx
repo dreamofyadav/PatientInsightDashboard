@@ -97,7 +97,7 @@ export default function EditPatient() {
 
         {/* Disease */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          {/* <label className="block text-sm font-medium text-gray-700 mb-1">
             Disease
           </label>
           <select
@@ -109,9 +109,16 @@ export default function EditPatient() {
           >
             <option value="">Select Disease</option>
             <option value="covid">Covid-19</option>
-            <option value="dengu">Dengue</option>
+            <option value="dengu">Dengu</option>
             <option value="allergy">Allergy</option>
-          </select>
+          </select> */}
+
+           <label className="block text-sm font-medium text-gray-700 mb-1">
+            Disease
+          </label>
+           <input type="text" name="disease" value={form.disease|| ""} onChange={handleChange} required
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
         </div>
 
         {/* Condition */}

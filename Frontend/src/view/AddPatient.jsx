@@ -86,13 +86,7 @@ export default function AddPatient({ refresh, editData, clearEdit }) {
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Age
           </label>
-          <input
-            type="number"
-            name="age"
-            value={form.age}
-            onChange={handleChange}
-            placeholder="Enter age"
-            required
+          <input type="number" name="age" value={form.age} onChange={handleChange} placeholder="Enter age" required
             className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
         </div>
@@ -102,7 +96,13 @@ export default function AddPatient({ refresh, editData, clearEdit }) {
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Disease
           </label>
-          <select
+           <input type="text" name="disease" value={form.disease} onChange={handleChange} placeholder="Enter Desease.." required
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+          {/* <label className="block text-sm font-medium text-gray-700 mb-1">
+            Disease
+          </label> */}
+          {/* <select
             name="disease"
             value={form.disease}
             onChange={handleChange}
@@ -115,7 +115,7 @@ export default function AddPatient({ refresh, editData, clearEdit }) {
             <option value="covid">Covid-19</option>
             <option value="dengu">Dengue</option>
             <option value="allergy">Allergy</option>
-          </select>
+          </select> */}
         </div>
 
         {/* Condition */}

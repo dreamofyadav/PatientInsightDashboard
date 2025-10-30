@@ -3,10 +3,11 @@ import mongoose from "mongoose";
 const patientSchema = new mongoose.Schema({
   name: String,
   age: Number,
-  disease:{ 
-    type: String,
-    enum:[ "covid","dengu","allergy"],
-  },
+  disease: String,
+  // disease:{ 
+  //   type: String,
+  //   // enum:[ "covid","dengu","allergy"],
+  // },
   condition: {
     type: String,
     enum:["critical", "normal"],

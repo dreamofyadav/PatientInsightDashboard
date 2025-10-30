@@ -17,8 +17,7 @@ export default function PatientChart({ stats }) {
     normal: "#8884D8",     // Purple
   };
 
-  console.log("Patient stats:", stats);
-console.log("Chart data:", data);
+  const topDiseases = stats?.topDiseases || [];
 
   return (
     <div className="mt-8 flex flex-col items-center justify-center md:flex-row md:gap-12">
@@ -52,6 +51,19 @@ console.log("Chart data:", data);
             </span>
           </div>
         ))}
+
+         {topDiseases.length > 0 && (
+          <div className="mt-4 border-t border-gray-300 pt-3">
+            <h4 className="font-semibold text-gray-800 mb-2">
+               Top 3 Diseases
+            </h4>
+            <ul className="list-disc pl-6 text-gray-700">
+              {topDiseases.map((disease, i) => (
+                <li key={i}>{disease}</li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
