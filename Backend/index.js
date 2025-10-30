@@ -12,5 +12,10 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/patients", patientRoutes);
 
+
+app.get("/", (req, res) => {
+  res.send("Api is working ");
+});
+
 const PORT = process.env.PORT || 3002;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
