@@ -1,15 +1,3 @@
-// export default function StatsCards({ stats }) {
-//   return (
-//     <div style={{ display: "flex", gap: "10px", margin: "20px 0" }}>
-//       <div style={{ flex: 1, background: "#bae6fd", padding: "15px", borderRadius: "8px" }}>Total: {stats.total}</div>
-//       <div style={{ flex: 1, background: "#bbf7d0", padding: "15px", borderRadius: "8px" }}>Admitted: {stats.admitted}</div>
-//       <div style={{ flex: 1, background: "#fde68a", padding: "15px", borderRadius: "8px" }}>Discharged: {stats.discharged}</div>
-//       <div style={{ flex: 1, background: "#fca5a5", padding: "15px", borderRadius: "8px" }}>Avg Stay: {stats.avgStay} days</div>
-//     </div>
-//   );
-// }
-
-
 import React from "react";
 
 export default function StatsCards({ stats }) {
