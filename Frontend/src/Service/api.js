@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:3002/api" });
+const API = axios.create({ baseURL: "https://patientinsightdashboard.onrender.com/api" });
 
 export const getPatients = (search = "") => API.get(`/patients?search=${search}`);
 export const addPatient = (patientData) => API.post("/patients", patientData);
