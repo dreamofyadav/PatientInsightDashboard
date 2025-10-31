@@ -51,7 +51,7 @@ export default function PatientChart({ stats }) {
             </span>
           </div>
         ))}
-
+      {/* top 3 desease */}
          {topDiseases.length > 0 && (
           <div className="mt-4 border-t border-gray-300 pt-3">
             <h4 className="font-semibold text-gray-800 mb-2">

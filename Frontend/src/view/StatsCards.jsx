@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function StatsCards({ stats }) {
+
   const cards = [
     {
       label: "Total Patients",

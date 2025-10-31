@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PatientTable({ patients, handleEdit }) {
   const safePatients = Array.isArray(patients) ? patients : [];
-
+  
   const getStatusColor = (status) => {
     switch (status) {
       case "critical":
@@ -15,6 +15,7 @@ export default function PatientTable({ patients, handleEdit }) {
         return "text-gray-600";
     }
   };
+
 
   if (safePatients.length === 0) {
     return (

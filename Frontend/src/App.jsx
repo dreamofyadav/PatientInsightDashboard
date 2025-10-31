@@ -16,6 +16,7 @@ function Dashboard() {
   const [patients, setPatients] = useState([]);
   const [stats, setStats] = useState({});
   const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     loadData();
@@ -23,6 +24,7 @@ function Dashboard() {
 
   const loadData = async () => {
     try {
+      setLoading(true);
     const p = await getPatients(search);
     const s = await getStats();
      setPatients(Array.isArray(p.data) ? p.data : []);
@@ -31,8 +33,18 @@ function Dashboard() {
     // setStats(s.data);
     } catch (err) {
       console.error("Error loading Data", err);
+    } finally {
+      setLoading(false);
     }
   };
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div className="w-12 h-12 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="pt-20 px-6">
